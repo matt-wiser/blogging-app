@@ -2,6 +2,7 @@ const router = require("express").Router();
 const sequelize = require("../config/connection");
 const {Post, User, Comment} = require("../models");
 
+//Serve homepage with all posts
 router.get("/", (req, res) => {
     Post.findAll({
         attributes: ["id", "content", "title", "created_at"],
@@ -28,6 +29,13 @@ router.get("/", (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
+});
+
+router.get("/login", (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect("/");
+    }
+    res.render("login");
 });
 
 module.exports = router;
