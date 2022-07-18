@@ -18,11 +18,12 @@
                 <i class="bi bi-terminal d-inline-block align-text-top" id="blog-glyph"></i>
                 Tech blog</a>
                 <div id="navbar-content" class="d-flex justify-content-end">
+                    <a href="/dashboard" class="btn btn-outline-info" id="dashboard">Dashboard</a>
                     {{#if loggedIn}}
-                    <a href="/dashboard" class="btn btn-outline-primary">Dashboard</a>
                     <a id="logout" href="#" class="btn btn-outline-danger">Log Out</a>
                     {{else}}
-                    <a href="/login" class="btn btn-outline-success">Log In</a>
+                    <a href="/login" class="btn btn-outline-primary" id="login">Log In</a>
+                    <a href="/signup" class="btn btn-outline-success">Sign Up</a>
                     {{/if}}
                 </div>
             </div>

@@ -1,6 +1,10 @@
 {{#each this}}
-<section class="comment">
-    <h5>By {{user.username}} on {{format_date created_at}}</h5>
-    <p>{{comment_text}}</p>
-</section>
+
+<div class="row justify-content-evenly comment-row">
+    <div class="col-lg-6 col-sm-12 comment">
+        <h5>By {{user.username}} on {{format_date created_at}}</h5>
+        <p>{{comment_text}}</p>
+    </div>
+</div>
+
 {{/each}}

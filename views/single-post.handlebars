@@ -2,23 +2,24 @@
 
 {{> post-info-single post}}
 
+{{!-- populating comments with comments partial --}}
+{{> comments post.comments}}
 
 {{#if loggedIn}}
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
-    </div>
+<div class="row justify-content-evenly">
+    <div class="col-lg-6 col-sm-12 comment-row">
     
-    <div>
-        <button type="submit" class="btn btn-primary">Add Comment</button>
+        <form class="comment-form">
+            <label for="comment-body" class="form-label">Add a comment</label>
+            <textarea name="comment-body" class="form-control"></textarea>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    
     </div>
-</form>
-{{/if}}
-
-<div class="comments">
-    {{!-- populating comments with comments partial --}}
-    {{> comments post.comments}}
 </div>
+
+
+{{/if}}
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>

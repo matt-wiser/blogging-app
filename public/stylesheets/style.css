@@ -11,9 +11,9 @@ body{
 #blog-glyph, .navbar-brand {
     color: var(--navy-blue);
 }
- #navbar-content #logout{
-    margin-left: 25px;
- }
+#dashboard, #login{
+    margin-right: 25px;
+}
 
  .card {
     padding: 0 !important;
@@ -56,4 +56,18 @@ body{
 
 .login-form{
    margin-bottom: 60px;
+}
+
+.comment-form button {
+   margin-top: 20px;
+
+}
+
+.comment-row:nth-child(odd) .comment{
+   background-color: var(--blue-green);
+}
+
+.login-btn, .signup-btn {
+   margin-top: 20px;
+   width: 100%;
 }
