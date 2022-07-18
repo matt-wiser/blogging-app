@@ -1,11 +1,6 @@
-<article>
-    <h3>{{post.title}}</h3>
-    <h4>Posted by {{post.user.username}} on {{post.created_at}}</h4>
-    <h5>{{post.content}}</h5>
-    <h5>
-        <a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
-    </h5>
-</article>
+{{!-- populating the post content using post info partial --}}
+{{> post-info post}}
+
 {{#if loggedIn}}
 <form class="comment-form">
     <div>
@@ -17,15 +12,10 @@
     </div>
 </form>
 {{/if}}
+
 <div class="comments">
-    {{#each post.comments}}
-    
-    <section class="comment">
-        <h5>By {{user.username}} on {{created_at}}</h5>
-        <p>{{comment_text}}</p>
-    </section>
-    
-    {{/each}}
+    {{!-- populating comments with comments partial --}}
+    {{> comments post.comments}}
 </div>
 
 {{#if loggedIn}}
