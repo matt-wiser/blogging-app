@@ -14,6 +14,7 @@ Create an MVC social blogging application using MYSQL, sequelize ORM, bcrypt, Ex
 * Handlebars templating engine
 * bcrypt password hashing and matching
 * dotenv for environment variable management
+* JAWSDB and Heroku for cloud deployment
 * Insomnia for API querying
 
 ## [Link to deployed application](https://hidden-meadow-26722.herokuapp.com/)
