@@ -1,7 +1,7 @@
 <article>
     <h3><a href="/post/{{id}}">{{title}}</a></h3>
     <h4>Posted by {{user.username}} on {{format_date created_at}}</h4>
-    <h5>{{post.content}}</h5>
+    <h5>{{content}}</h5>
     <h5>
         <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
     </h5>
