@@ -1,3 +1,45 @@
-body{
-    background-color: #d7e5fc;
+:root{
+    --navy-blue: #05445E;
+    --blue-grotto: #189AB4;
+    --blue-green: #75E6DA;
+    --baby-blue: #D4F1F4;
 }
+body{
+    background-color: var(--baby-blue);
+}
+
+#blog-glyph, .navbar-brand {
+    color: var(--navy-blue);
+}
+ #navbar-content #logout{
+    margin-left: 25px;
+ }
+
+ .card {
+    padding: 0 !important;
+    margin-bottom: 30px;
+ }
+
+ .dashboard-header {
+    text-align: center;
+ }
+
+ header{
+    margin-bottom: 120px;
+ }
+
+ #new-post-submit {
+    width: 100%;
+    margin-top: 20px;
+ }
+ 
+ form{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    outline: 1px solid rgba(50, 51, 54, .3);
+ }
+
+ .new-post-form {
+    margin-bottom: 20px;
+ }

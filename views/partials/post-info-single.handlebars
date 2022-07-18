@@ -1,7 +1,7 @@
 <div class="row justify-content-evenly">
     <div class="col-lg-6 col-sm-12">
         <div class="card">
-            <h4 class="card-header">{{increment @index}}. <a href="/post/{{id}}">{{title}}</a></h4>
+            <h4 class="card-header"><a href="/post/{{id}}">{{title}}</a></h4>
             <div class="card-body">
                 <h6 class="card-subtitle text-muted">By {{user.username}} on {{format_date created_at}}</h6>
                 <p class="card-text">{{content}}</p>

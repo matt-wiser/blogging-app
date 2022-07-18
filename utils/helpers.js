@@ -11,4 +11,7 @@ module.exports = {
     
         return word;
       },
+      increment: (index) => {
+        return parseInt(index + 1)
+      }
   }

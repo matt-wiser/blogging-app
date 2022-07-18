@@ -1,33 +1,22 @@
-<section>
-  <h2>Create New Post</h2>
+<div class="row justify-content-evenly">
+    <div class="col-lg-6 col-sm-12">
+      <h2>Create a new post</h2>
+      <form class="new-post-form">
+        <label for="post-title" class="form-label">Title</label>
+        <input type="text" id="post-title" name="post-title" class="form-control"/>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+        <label for="post-body" class="form-label">Content</label>
+        <textarea id="post-body" name="post-body" class="form-control"/ rows="4"></textarea>
+
+        <button type="submit" class="btn btn-success" id="new-post-submit">Create</button>
+      </form>
     </div>
-  
-    <div>
-      <label for="post-body">Content</label>
-      <input id="post-body" name="post-body" />
-    </div>
-
-    <button type="submit" class="btn btn-primary">Create</button>
-  </form>
-</section>
-
+</div>
 {{#if posts.length}}
-  <section>
-    <h2>Your Posts</h2>
-    <ol>
-        {{#each posts as |post|}}
-        <li>
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}">Edit Post</a>
-        </li>
-        {{/each}}
-    </ol>
-  </section>
+  <h2 class="dashboard-header">Your Posts</h2>
+    {{#each posts as |post|}}
+      {{> post-info-dashboard post}}
+    {{/each}}
 {{/if}}
 
 <script src="/javascript/add-post.js"></script>
