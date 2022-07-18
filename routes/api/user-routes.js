@@ -63,12 +63,12 @@ router.put('/:id', ({body, params}, res) => {
             id: params.id
         }
     })
-    .then(dbUserData => {
-        if (!dbUserData[0]) {
+    .then(userData => {
+        if (!userData[0]) {
           res.status(404).json({ message: 'No user found with this id' });
           return;
         }
-        res.json(dbUserData);
+        res.json(userData);
       })
       .catch(err => {
         console.log(err);
@@ -95,5 +95,30 @@ router.delete('/:id', ({params}, res) => {
         res.status(500).json(err);
     })
 });
+
+
+// User login route
+// expects {email: 'lernantino@gmail.com', password: 'password1234'}
+router.post("/login", (req, res) => {
+    User.findOne({
+        where: {
+            email: req.body.email
+        }
+    })
+    .then(userData => {
+        if (!userData) {
+            res.status(400).json({ message: 'No user with that email address!' });
+            return;
+        }
+        const validPassword = userData.checkPassword(req.body.password)
+        
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect Password!' });
+            return;
+        }
+        res.json({user: userData, message: "You are now logged in!"});
+    });
+});
+
 
 module.exports = router;
