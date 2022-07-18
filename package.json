@@ -1,0 +1,26 @@
+{
+  "name": "blogging-app",
+  "version": "1.0.0",
+  "description": "Full Stack MVC application using Express, SQL and handlebars",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt-wiser/blogging-app.git"
+  },
+  "author": "Matthew Wiser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matt-wiser/blogging-app/issues"
+  },
+  "homepage": "https://github.com/matt-wiser/blogging-app#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3"
+  }
+}
