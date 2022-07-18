@@ -40,6 +40,20 @@ body{
     outline: 1px solid rgba(50, 51, 54, .3);
  }
 
- .new-post-form {
-    margin-bottom: 20px;
+ .new-post-form, .edit-post-form {
+    margin-bottom: 60px;
  }
+
+ .save-comment-btn{
+    margin-top: 20px;
+    width: 92%;
+ }
+
+ .save-edit-post-btn, .delete-post-btn {
+    margin-top: 20px;
+    width: 46%;
+ }
+
+.login-form{
+   margin-bottom: 60px;
+}

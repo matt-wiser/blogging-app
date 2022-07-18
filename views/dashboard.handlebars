@@ -13,7 +13,11 @@
     </div>
 </div>
 {{#if posts.length}}
-  <h2 class="dashboard-header">Your Posts</h2>
+  <div class="row justify-content-evenly">
+    <div class="col-lg-6 col-sm-12">
+    <h2>Your Posts</h2>
+    </div>
+    </div>
     {{#each posts as |post|}}
       {{> post-info-dashboard post}}
     {{/each}}
