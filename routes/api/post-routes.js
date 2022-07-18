@@ -49,7 +49,7 @@ router.get("/:id", ({params}, res) => {
             },
             {
                 model: User,
-                attributes: ["Username"]
+                attributes: ["username"]
             }
         ]
     })

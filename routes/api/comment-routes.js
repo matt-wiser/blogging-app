@@ -40,6 +40,7 @@ router.post('/', ({body}, res) => {
         res.status(400).json(err);
     });
 });
+
 //update a comment
 //expects {comment_text: ""}
 router.put('/:id', ({body, params}, res) => {
