@@ -26,19 +26,21 @@ router.get('/', (req, res) => {
 
 //create a comment
 //expects {comment_text: "", user_id: "", post_id: ""}
-router.post('/', ({body}, res) => {
-    Comment.create({
-        comment_text: body.comment_text,
-        user_id: body.user_id,
-        post_id: body.post_id
-    })
-    .then(commentData => {
-        res.json({commentData})
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(400).json(err);
-    });
+router.post('/', (req, res) => {
+    if (req.session) {
+        Comment.create({
+            comment_text: req.body.comment_text,
+            user_id: req.body.user_id,
+            post_id: req.body.post_id
+        })
+        .then(commentData => {
+            res.json({commentData})
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(400).json(err);
+        });   
+    }
 });
 
 //update a comment
